@@ -21,3 +21,9 @@ class Room:
     def charge_fee(self, guest, amount):
         guest.pay_fee(amount)
         self.money_spent_in_room += amount
+
+    def guest_in_room_check(self, guest):
+        for room_guest in self.guests_in_room:
+            if guest == room_guest:
+                return True
+            else: False

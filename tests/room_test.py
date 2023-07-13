@@ -7,7 +7,7 @@ class TestRoom(unittest.TestCase):
     
     def setUp(self):
         self.room1 = Room("Room 1", 4, 10)
-        self.guest1 = Guest("Mike", 25, "Rock and Roll McDonalds")
+        self.guest1 = Guest("Mike", 25)
         self.song1 = Song("Rock and Roll McDonalds")
 
     def test_check_in_guest(self):
@@ -35,3 +35,8 @@ class TestRoom(unittest.TestCase):
         self.room1.check_in_guest(self.guest1)
         self.assertEqual(15, self.guest1.wallet)
         self.assertEqual(10, self.room1.money_spent_in_room)
+
+    def test_guest_in_room_check(self):
+        self.room1.check_in_guest(self.guest1)
+        result = self.room1.guest_in_room_check(self.guest1)
+        self.assertEqual(True, result)
