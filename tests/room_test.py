@@ -7,7 +7,7 @@ class TestRoom(unittest.TestCase):
     
     def setUp(self):
         self.room1 = Room("Room 1", 4, 10)
-        self.guest1 = Guest("Mike", 25)
+        self.guest1 = Guest("Mike", 25, "Rock and Roll McDonalds")
         self.song1 = Song("Rock and Roll McDonalds")
 
     def test_check_in_guest(self):
