@@ -9,3 +9,6 @@ class Room:
 
     def check_out_guest(self, guest):
         self.guests_in_room.remove(guest)
+
+    def add_song(self,song):
+        self.list_of_songs.append(song)
