@@ -6,3 +6,6 @@ class Room:
     
     def check_in_guest(self, guest):
         self.guests_in_room.append(guest)
+
+    def check_out_guest(self, guest):
+        self.guests_in_room.remove(guest)
